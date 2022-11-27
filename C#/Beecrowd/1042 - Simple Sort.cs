@@ -1,15 +1,25 @@
-using System; 
-
-namespace Beecrowd{
-
-    class URI {
-    
-        static void Main(string[] args) { 
-    
-			      string[] scanf = Console.ReadLine().Split();
-            
-            Console.WriteLine("\n{0}\n{1}\n{2}\n", scanf);
-            
-        }
-    }
+using System;
+using System.Linq;
+					
+public class Program
+{
+	public static void Main(){
+		
+		int[] numeros = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+		int tamanho = numeros.Length;
+		int [] numerosOrdenados = new int[tamanho];
+		
+		Array.Copy(numeros, 0, numerosOrdenados, 0, tamanho);
+		Array.Sort(numerosOrdenados);
+		
+		for(int i=0;i<numeros.Length;i++){
+  			Console.WriteLine(numerosOrdenados[i]);
+		}
+		
+		Console.WriteLine("\n");
+		
+		for(int i=0;i<numeros.Length;i++){
+  			Console.WriteLine(numeros[i]);
+ 		}
+	}
 }
