@@ -17,9 +17,9 @@ namespace Beecrowd{
     		for(int i=0;i<numeros.Length;i++){
       			Console.WriteLine(numerosOrdenados[i]);
     		}
-    		
-    		Console.WriteLine("\n");
-    		
+			
+			Console.WriteLine();
+			
     		for(int i=0;i<numeros.Length;i++){
       			Console.WriteLine(numeros[i]);
      		}
