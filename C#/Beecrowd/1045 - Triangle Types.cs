@@ -15,23 +15,25 @@ namespace Beecrowd{
     		Array.Sort(ladosOrdenados);
 			Array.Reverse(ladosOrdenados);
     		
-    		if(lados[0] >= lados[1]+lados[2])
+    		if(ladosOrdenados[0] >= ladosOrdenados[1]+ladosOrdenados[2]){
 				Console.WriteLine("NAO FORMA TRIANGULO");
-			
-			if(lados[0]*lados[0] == (lados[1]*lados[1])+(lados[2]*lados[2]))
-				Console.WriteLine("TRIANGULO RETANGULO");
-			
-			if(lados[0]*lados[0] > (lados[1]*lados[1])+(lados[2]*lados[2]))
-				Console.WriteLine("TRIANGULO OBTUSANGULO");
-			
-			if(lados[0]*lados[0] < (lados[1]*lados[1])+(lados[2]*lados[2]))
-				Console.WriteLine("TRIANGULO ACUTANGULO");
-			
-			if(lados[0] == lados[1] && lados[1] == lados[2])
-				Console.WriteLine("TRIANGULO EQUILATERO");
-			
-			if(lados[0] == lados[1] || lados[0] == lados[2] || lados[1] == lados[2])
-				Console.WriteLine("TRIANGULO ISOSCELES");
+			}
+			else{
+				if(ladosOrdenados[0]*ladosOrdenados[0] == (ladosOrdenados[1]*ladosOrdenados[1])+(ladosOrdenados[2]*ladosOrdenados[2]))
+					Console.WriteLine("TRIANGULO RETANGULO");
+
+				if(ladosOrdenados[0]*ladosOrdenados[0] > (ladosOrdenados[1]*ladosOrdenados[1])+(ladosOrdenados[2]*ladosOrdenados[2]))
+					Console.WriteLine("TRIANGULO OBTUSANGULO");
+
+				if(ladosOrdenados[0]*ladosOrdenados[0] < (ladosOrdenados[1]*ladosOrdenados[1])+(ladosOrdenados[2]*ladosOrdenados[2]))
+					Console.WriteLine("TRIANGULO ACUTANGULO");
+
+				if(ladosOrdenados[0] == ladosOrdenados[1] && ladosOrdenados[1] == ladosOrdenados[2])
+					Console.WriteLine("TRIANGULO EQUILATERO");
+
+				if((ladosOrdenados[0] == ladosOrdenados[1] && ladosOrdenados[0] != ladosOrdenados[2]) || (ladosOrdenados[0] == ladosOrdenados[2] && ladosOrdenados[0] != ladosOrdenados[1]) || (ladosOrdenados[1] == ladosOrdenados[2] && ladosOrdenados[1] != ladosOrdenados[0]))
+					Console.WriteLine("TRIANGULO ISOSCELES");
+			}
     	}
     }
 }
