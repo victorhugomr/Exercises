@@ -13,7 +13,12 @@ namespace Beecrowd{
 				Console.WriteLine("Sao Multiplos");
 			}
 			else{
-				Console.WriteLine("Nao sao Multiplos");
+				if((scanf[0] % scanf[1]) == 0){
+					Console.WriteLine("Sao Multiplos");
+				}
+				else{
+					Console.WriteLine("Nao sao Multiplos");
+				}
 			}
     	}
     }
