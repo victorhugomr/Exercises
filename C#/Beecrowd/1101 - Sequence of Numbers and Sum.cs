@@ -40,7 +40,7 @@ namespace Beecrowd{
 				sum = 0;
 				numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
 				
-			}while(numbers[0]!=0 && numbers[1]!=0);
+			}while(numbers[0]>0 && numbers[1]>0);
     	}
     }
 }
